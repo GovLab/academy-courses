@@ -286,6 +286,7 @@ h4:before {
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;  
   font-size: 14px;
   color: #474747;
+  font-weight: bold;
 } 
 h5:before {
   content: "/////";
@@ -300,7 +301,7 @@ body {
   line-height: 1.5; 
   background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-  font-weight: 800;
+  font-weight: bold;
   color: #666;
 }
 } 
