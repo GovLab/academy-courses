@@ -1,0 +1,476 @@
+$gray_80: rgba(0,0,0,0.8);
+$gray_50: rgba(0,0,0,0.5);
+$gray_20: rgba(0,0,0,0.2);
+$orange: rgba(240,90,40,1);
+$orange_50: rgba(240,90,40,.5);
+$orange_25: rgba(240,90,40,.25);
+$orange_5: rgba(240,90,40,.05);
+$white: white;
+
+@mixin circle {
+	border-radius: 50%;
+}
+
+@mixin drop-shadow {
+	box-shadow: 1px 1px 8px $gray_20;
+}
+
+body {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 0;
+	color: $gray_80;
+
+}
+
+.l-centered {
+	margin: 0 auto;
+	width: 800px;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 100;
+}
+
+p {
+	padding-bottom: 8px;
+	line-height: 1.35em;
+}
+
+a {
+	color: $orange;
+	text-decoration: none;
+
+	&:hover {
+		color: $white;
+		background-color: $orange;
+		padding: 2px 0;
+
+	}	
+}
+
+ul {
+	padding: 10px 0;
+}
+
+li {
+	padding: 3px 0;
+	margin-left: 14px;
+	position: relative;
+	list-style: none;
+	color: $gray_80;
+
+	&::before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-left: 6px solid $orange;
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+		position: absolute;
+		left: -14px;
+		top: 6px;
+	}
+}
+
+.e-dropcap::first-letter {
+	float: left;
+	font-size: 7rem;
+	line-height: 6rem;
+	background-color: $orange;
+	margin-right: 10px;
+	color: $white;
+	font-weight: 100;
+
+}
+
+.b-section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid $orange;
+
+	h1 {
+		margin-top: 0;
+	}
+}
+
+.b-header {
+	height: 4px;
+	background-color: $orange;
+	width: 100%;
+}
+
+.b-main-nav {
+	text-align: center;
+	margin-top: 10px;
+
+	a {
+		display: inline-block;
+		padding: 0 10px;
+		border-right: 1px solid $gray_20;
+		font-weight: 100;
+
+		&:last-child {
+			border-right: 0;
+		}
+	}
+}
+
+.b-button {
+	display: inline-block;
+	padding: 7px 12px;
+	background-color: $gray_20;
+	color: $gray_80;
+
+	&:hover {
+		background-color: $orange;
+		color: $white;
+		padding: 7px 12px;
+	}
+
+}
+
+.b-above-flip {
+
+	.e-academy-logo {
+		@include circle;
+		padding: 10px;
+		border: 4px solid $orange;
+		width: 70px;
+		height: 70px;
+		display: block;
+		text-align: center;
+		float: right;
+		margin-top: -24px;
+
+		img {
+			width: 56px;
+			text-align: center;
+			vertical-align: middle;
+			position: relative;
+			top: 7px;
+		}	
+
+		&:hover {
+			background-color: $white;
+			@include drop-shadow;
+		}
+	}
+
+	h1 {
+		font-weight: 100;
+		font-size: 4.6rem;
+		margin-bottom: 0;
+		margin-top: 0;
+		clear: right;
+	}
+
+	h2 {
+		margin-top: 6px;
+		font-size: 2rem;
+		font-weight: 600;
+	}
+
+	.e-tagline {
+		font-size: 2rem;
+		text-align: right;
+		font-style: italic;
+		font-weight: 100;
+	}
+
+	.e-questions {
+		h3 {
+			font-size: 1.9rem;
+			margin-top: 0;
+		}
+
+		li {
+			font-size: 1.4rem;
+
+			&::before {
+				top: 8px;
+			}
+		}
+	}
+}
+
+.b-box {
+	border: 1px solid $orange;
+	background-color: $orange_5;
+	padding: 10px 15px;
+}
+
+.b-week {
+	padding-top: 40px;
+	
+	.e-week-content {
+		padding: 0 20px 0 26px;
+		border: 1px solid $orange;
+		margin-left: 80px;
+		position: relative;
+		margin-bottom: 5px;
+
+		p {
+			padding-bottom: 4px;
+		}
+
+		&::before {
+			content:"";
+			width: 0;
+			height: 0;
+			border-right: 16px solid $orange;
+			border-top: 16px solid transparent;
+			border-bottom: 16px solid transparent;
+			position: absolute;
+			top: 25px;
+			left: -16px;
+		}
+
+		&::after {
+			content:"";
+			width: 20px;
+			height: 20px;
+			border: 6px solid $gray_80;
+			background-color: $white;
+			position: absolute;
+			top: 25px;
+			left: -70px;
+			@include circle;
+		}
+
+		.e-week-number {
+			position: absolute;
+			left: 10px;
+			top: -36px;
+			background-color: $white;
+			padding: 0 10px;
+			color: $orange;
+			font-weight: 400;
+		}
+	}
+}
+
+.b-weekly-calendar {
+
+	.l-centered {
+		position: relative;	
+	}
+
+	h1 {
+		margin-bottom: 15px;
+	}
+
+	.e-timeline {
+		display: inline-block;
+		position: absolute;
+		left: 23px;
+		top: 210px;
+		bottom: 200px;
+		border: 4px solid $orange_25;
+	}
+}
+
+.b-weekly-nav {
+	// border-bottom: 1px solid $gray_20;
+	position: relative;
+	// padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	.e-weekly-nav-item {
+		width: 16px;
+		height: 16px;
+		border: 4px solid $gray_80;
+		background-color: $white;
+		display: inline-block;
+		@include circle;
+		margin-right: 26px;
+		position: relative;
+
+		&:hover {
+			padding: 0;
+			background-color: $orange;
+
+			span {
+				color: $orange;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		span {
+			position: absolute;
+			bottom: -30px;
+			font-size: .8rem;
+			width: 80px;
+			left: -30px;
+			color: $gray_50;
+
+		}
+	}
+
+	.e-nav-timeline {
+		border: 3px solid $orange;
+		position: absolute;
+		z-index: -1;
+		left: 20px;
+		top: 9px;
+		width: 760px;
+
+	}
+}
+
+.b-faq {
+
+}
+
+.e-faq-question {
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-top: 30px;
+	border-top: 1px solid $gray_20;
+	padding-top: 20px;
+}
+
+.e-faq-answer {
+	margin-top: 0;
+	margin-bottom: 10px;
+
+	li {
+		margin: 4px 0 4px 16px;
+	}
+}
+
+.b-alone,
+.b-discussion,
+.b-workshop,
+.b-pod {
+	position: relative;
+}
+
+.b-alone::before,
+.b-discussion::before,
+.b-workshop::before,
+.b-pod::before {
+	content:"";
+	position: absolute;
+	left: -42px;
+	width: 28px;
+	height: 28px;
+	@include circle;
+	border: 2px solid $orange;
+	background: url(../img/homework.png) no-repeat;
+	background-size: cover;
+	background-color: $white;
+}
+
+.b-discussion::before {
+	background: url(../img/online-discussion.png) no-repeat 3px 3px;
+	background-size: 85%;
+	background-color: $white;
+}
+
+.b-pod::before {
+	background: url(../img/learning-pod.png) no-repeat 2px 4px;
+	background-size: 90%;
+	background-color: $white;
+}
+
+.b-workshop::before {
+	background: url(../img/in-class.png) no-repeat 1px 4px;
+	background-size: 90%;
+	background-color: $white;
+}
+
+.b-readings {
+	border-top: 1px solid $orange;
+	position: relative;
+	height: auto;
+	max-height: 35px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	font-size: 1rem;
+
+
+
+	&.m-active {
+		max-height: 1000px;
+	
+		.e-trigger {
+			background-color: $orange;
+			color: $white;
+
+			&::after {
+				width: 0;
+				height: 0;
+				border-top: 8px solid $white !important;
+				border-right: 8px solid transparent !important;
+				border-left: 8px solid transparent !important;
+				content: "";
+				position: absolute;
+				right: 20px;
+				top: 12px !important;
+			}
+		}
+
+	}
+
+	.e-trigger {
+		margin: 0 0 10px 0;
+		padding: 5px 10px;
+		color: $orange;
+		cursor: pointer;
+		position:relative;
+
+		&:hover {
+			background-color: $orange;
+			color: $white;
+		}
+
+		&::after {
+			width: 0;
+			height: 0;
+			border-right: 8px solid $orange;
+			border-top: 8px solid transparent;
+			border-bottom: 8px solid transparent;
+			content: "";
+			position: absolute;
+			right: 20px;
+			top: 7px;
+		}
+
+		&:hover::after {
+			border-right-color: $white;
+		}
+	}
+
+	p {
+		margin: 5px 0;
+		color: $gray_80;
+	}
+
+	a {
+		color: $orange;
+
+		&:hover {
+			color: $white;
+		}
+
+		&:visited {
+			color: #999;
+		}
+
+		&:visited:hover {
+			background-color: #ddd;
+		}
+	}
+
+
+
+	
+	
+}
