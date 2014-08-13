@@ -111,10 +111,17 @@ li {
 		padding: 0 10px;
 		border-right: 1px solid $gray_20;
 		font-weight: 100;
+		vertical-align: top;
+		margin-top: 15px;
+
 
 		&:last-child {
 			border-right: 0;
 		}
+	}
+
+	.govlab-logo {
+		width: 180px;
 	}
 }
 

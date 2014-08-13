@@ -23,6 +23,8 @@ $(function() {
 
 $('.e-trigger').click(function() {
 	$(this).parent().toggleClass('m-active');
+	// $(this).children().addClass('icon-minus');
+	// $(this).children().removeClass('icon-plus');
 })
 
 
