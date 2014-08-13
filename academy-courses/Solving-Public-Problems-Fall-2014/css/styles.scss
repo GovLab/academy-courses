@@ -15,6 +15,10 @@ $white: white;
 	box-shadow: 1px 1px 8px $gray_20;
 }
 
+@mixin transition {
+	transition: all .5s ease-in-out;
+}
+
 body {
 	font-family: "proxima-nova", sans-serif;
 	font-size: 1.2rem;
@@ -401,26 +405,20 @@ li {
 	overflow: hidden;
 	margin-bottom: 10px;
 	font-size: 1rem;
+	@include transition;
 
 
 
 	&.m-active {
 		max-height: 1000px;
+		@include transition;
 	
 		.e-trigger {
 			background-color: $orange;
 			color: $white;
 
-			&::after {
-				width: 0;
-				height: 0;
-				border-top: 8px solid $white !important;
-				border-right: 8px solid transparent !important;
-				border-left: 8px solid transparent !important;
-				content: "";
-				position: absolute;
-				right: 20px;
-				top: 12px !important;
+			.icon-plus::before {
+				content:"\e608";
 			}
 		}
 
@@ -438,20 +436,11 @@ li {
 			color: $white;
 		}
 
-		&::after {
-			width: 0;
-			height: 0;
-			border-right: 8px solid $orange;
-			border-top: 8px solid transparent;
-			border-bottom: 8px solid transparent;
-			content: "";
+		.icon-plus {
 			position: absolute;
-			right: 20px;
+			right: 10px;
 			top: 7px;
-		}
-
-		&:hover::after {
-			border-right-color: $white;
+			font-size: 16px;
 		}
 	}
 

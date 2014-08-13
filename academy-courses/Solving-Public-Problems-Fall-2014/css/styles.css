@@ -280,22 +280,16 @@ li {
   max-height: 35px;
   overflow: hidden;
   margin-bottom: 10px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  transition: all .5s ease-in-out; }
   .b-readings.m-active {
-    max-height: 1000px; }
+    max-height: 1000px;
+    transition: all .5s ease-in-out; }
     .b-readings.m-active .e-trigger {
       background-color: #f05a28;
       color: white; }
-      .b-readings.m-active .e-trigger::after {
-        width: 0;
-        height: 0;
-        border-top: 8px solid white !important;
-        border-right: 8px solid transparent !important;
-        border-left: 8px solid transparent !important;
-        content: "";
-        position: absolute;
-        right: 20px;
-        top: 12px !important; }
+      .b-readings.m-active .e-trigger .icon-plus::before {
+        content: "\e608"; }
   .b-readings .e-trigger {
     margin: 0 0 10px 0;
     padding: 5px 10px;
@@ -305,18 +299,11 @@ li {
     .b-readings .e-trigger:hover {
       background-color: #f05a28;
       color: white; }
-    .b-readings .e-trigger::after {
-      width: 0;
-      height: 0;
-      border-right: 8px solid #f05a28;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      content: "";
+    .b-readings .e-trigger .icon-plus {
       position: absolute;
-      right: 20px;
-      top: 7px; }
-    .b-readings .e-trigger:hover::after {
-      border-right-color: white; }
+      right: 10px;
+      top: 7px;
+      font-size: 16px; }
   .b-readings p {
     margin: 5px 0;
     color: rgba(0, 0, 0, 0.8); }
