@@ -224,14 +224,18 @@ li {
     top: 9px;
     width: 760px; }
 
+.b-faq:first-of-type .e-faq-answer {
+  display: block; }
+
 .e-faq-question {
   font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 30px;
+  margin: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  padding-top: 20px; }
+  padding: 20px 0;
+  cursor: pointer; }
 
 .e-faq-answer {
+  display: none;
   margin-top: 0;
   margin-bottom: 10px; }
   .e-faq-answer li {
@@ -315,3 +319,65 @@ li {
       color: #999; }
     .b-readings a:visited:hover {
       background-color: #ddd; }
+
+.e-legend {
+  font-size: .7rem;
+  font-style: italic; }
+
+p > img {
+  max-width: 100%; }
+
+@media all and (max-width: 50rem) {
+  h1 {
+    font-size: 2.3rem; }
+
+  li + li {
+    margin-top: 0.2rem; }
+
+  .b-section {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem; }
+
+  .b-main-nav {
+    display: none; }
+
+  .l-centered {
+    width: auto; }
+    .l-centered ul h1 a {
+      font-size: 2.3rem; }
+
+  .b-above-flip h1 {
+    font-size: 2.5rem;
+    text-align: center; }
+  .b-above-flip h2 {
+    margin-top: 0;
+    font-size: 1.75rem; }
+  .b-above-flip .e-academy-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -1rem; }
+    .b-above-flip .e-academy-logo img {
+      width: 2.3rem;
+      top: 0.1rem; }
+  .b-above-flip .e-tagline {
+    font-size: 1.3rem;
+    text-align: center; }
+  .b-above-flip .e-questions h3 {
+    font-size: 1.4rem; }
+  .b-above-flip .e-questions li {
+    font-size: 1.2rem; }
+
+  .b-week .e-week-content .e-week-number {
+    top: -1.9rem;
+    max-width: 88%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.15rem; }
+
+  .b-weekly-nav {
+    display: none; }
+
+  .b-weekly-calendar .e-timeline {
+    top: 150px;
+    bottom: 225px; } }

@@ -52,7 +52,7 @@ a {
 		background-color: $orange;
 		padding: 2px 0;
 
-	}	
+	}
 }
 
 ul {
@@ -162,7 +162,7 @@ li {
 			vertical-align: middle;
 			position: relative;
 			top: 7px;
-		}	
+		}
 
 		&:hover {
 			background-color: $white;
@@ -215,7 +215,7 @@ li {
 
 .b-week {
 	padding-top: 40px;
-	
+
 	.e-week-content {
 		padding: 0 20px 0 26px;
 		border: 1px solid $orange;
@@ -266,7 +266,7 @@ li {
 .b-weekly-calendar {
 
 	.l-centered {
-		position: relative;	
+		position: relative;
 	}
 
 	h1 {
@@ -339,15 +339,22 @@ li {
 
 }
 
+.b-faq:first-of-type {
+	.e-faq-answer {
+		display: block;
+	}
+}
+
 .e-faq-question {
 	font-weight: 600;
-	margin-bottom: 0;
-	margin-top: 30px;
+	margin: 0;
 	border-top: 1px solid $gray_20;
-	padding-top: 20px;
+	padding: 20px 0;
+	cursor: pointer;
 }
 
 .e-faq-answer {
+	display: none;
 	margin-top: 0;
 	margin-bottom: 10px;
 
@@ -407,12 +414,10 @@ li {
 	font-size: 1rem;
 	@include transition;
 
-
-
 	&.m-active {
 		max-height: 1000px;
 		@include transition;
-	
+
 		.e-trigger {
 			background-color: $orange;
 			color: $white;
@@ -464,9 +469,100 @@ li {
 			background-color: #ddd;
 		}
 	}
-
-
-
-	
-	
 }
+
+.e-legend {
+	font-size: .7rem;
+	font-style: italic;
+}
+
+p > img {
+	max-width: 100%;
+}
+
+
+
+
+@media all and (max-width: 50rem) {
+	h1 {
+		font-size: 2.3rem;
+	}
+
+	li + li {
+		margin-top: 0.2rem;
+	}
+
+	.b-section {
+		padding-left: 0.6rem;
+		padding-right: 0.6rem;
+	}
+
+	.b-main-nav {
+		display: none;
+	}
+
+	.l-centered {
+		width: auto;
+
+		ul h1 a {
+			font-size: 2.3rem;
+		}
+	}
+
+	.b-above-flip {
+		h1 {
+			font-size: 2.5rem;
+			text-align: center;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 1.75rem;
+		}
+
+		.e-academy-logo {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-top: -1rem;
+
+			img {
+				width: 2.3rem;
+				top: 0.1rem;
+			}
+		}
+
+		.e-tagline {
+			font-size: 1.3rem;
+			text-align: center;
+		}
+
+		.e-questions {
+			h3 {
+				font-size: 1.4rem;
+			}
+
+			li {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.b-week .e-week-content .e-week-number {
+		top: -1.9rem;
+		max-width: 88%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-size: 1.15rem;
+	}
+
+	.b-weekly-nav {
+		display: none;
+	}
+
+	.b-weekly-calendar .e-timeline {
+		top: 150px;
+		bottom: 225px;
+	}
+}
+
