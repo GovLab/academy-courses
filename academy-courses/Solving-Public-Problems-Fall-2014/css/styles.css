@@ -320,6 +320,13 @@ li {
     .b-readings a:visited:hover {
       background-color: #ddd; }
 
+.e-legend {
+  font-size: .7rem;
+  font-style: italic; }
+
+p > img {
+  max-width: 100%; }
+
 @media all and (max-width: 50rem) {
   h1 {
     font-size: 2.3rem; }
