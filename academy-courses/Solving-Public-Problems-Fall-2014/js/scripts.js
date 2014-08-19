@@ -31,8 +31,8 @@ $(document).ready(function() {
 	$('.e-faq-question').click(function() {
 		var self = this;
 
-		$('.e-faq-answer').not($(this).next()).slideUp('fast');
-		$(this).next().slideDown('fast');
+		$('.e-faq-answer').not($(this).next()).slideUp('fast').addClass('m-active');
+		$(this).next().slideDown('fast').removeClass('m-active');
 
 		// If element leave viewport, scroll to it.
 
