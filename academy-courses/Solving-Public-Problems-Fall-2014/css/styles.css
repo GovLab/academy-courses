@@ -224,6 +224,21 @@ li {
     top: 9px;
     width: 760px; }
 
+.b-faq::after {
+  content: "\e609";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  float: right;
+  margin-top: 20px;
+  color: #f05a28; }
+
 .b-faq:first-of-type .e-faq-answer {
   display: block; }
 
@@ -334,6 +349,9 @@ p > img {
   li + li {
     margin-top: 0.2rem; }
 
+  body {
+    font-size: 1rem; }
+
   .b-section {
     padding-left: 0.6rem;
     padding-right: 0.6rem; }
@@ -375,9 +393,12 @@ p > img {
     text-overflow: ellipsis;
     font-size: 1.15rem; }
 
-  .b-weekly-nav {
-    display: none; }
-
-  .b-weekly-calendar .e-timeline {
-    top: 150px;
-    bottom: 225px; } }
+  .b-weekly-calendar .e-week-content {
+    margin-left: 10px; }
+    .b-weekly-calendar .e-week-content h2 {
+      font-size: 1.2rem; }
+  .b-weekly-calendar .e-timeline,
+  .b-weekly-calendar .b-weekly-nav,
+  .b-weekly-calendar .e-week-content::before,
+  .b-weekly-calendar .e-week-content::after {
+    display: none; } }
