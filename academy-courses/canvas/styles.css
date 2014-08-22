@@ -1,0 +1,76 @@
+body {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  border-top: 4px solid #ff641e;
+  margin: 0;
+  padding-top: 30px; }
+
+.form-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 2px solid #ff641e;
+  padding: 0 20px 20px;
+  margin-bottom: 10px; }
+
+.intro-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+  padding: 0 20px 20px; }
+
+.ss-section-title {
+  margin: 0 0 10px;
+  padding: 20px 0;
+  color: #ff641e; }
+
+.ss-q-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px; }
+
+.ss-secondary-text {
+  color: #666;
+  margin: 5px 0;
+  font-size: 14px;
+  font-style: italic; }
+
+.ss-q-long {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: sans-serif; }
+
+.required-message,
+.ss-secondary-text,
+#progress-container,
+.ss-password-warning {
+  display: none; }
+
+.pixar-pitch .ss-q-title {
+  display: inline-block; }
+.pixar-pitch .ss-q-short {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  width: 400px;
+  margin-left: 15px;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 5px; }
+
+#ss-submit {
+  padding: 8px 20px;
+  margin-top: 20px;
+  background-color: #ff641e;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #ff641e; }
