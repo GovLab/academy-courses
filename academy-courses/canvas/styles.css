@@ -45,13 +45,14 @@ body {
   font-family: sans-serif; }
 
 .required-message,
-.ss-secondary-text,
 #progress-container,
 .ss-password-warning {
   display: none; }
 
 .pixar-pitch .ss-q-title {
   display: inline-block; }
+.pixar-pitch .ss-secondary-text {
+  display: none; }
 .pixar-pitch .ss-q-short {
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);

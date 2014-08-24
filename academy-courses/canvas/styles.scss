@@ -57,7 +57,6 @@ body {
 }
 
 .required-message,
-.ss-secondary-text,
 #progress-container,
 .ss-password-warning {
 	display: none;
@@ -66,6 +65,10 @@ body {
 .pixar-pitch {
 	.ss-q-title {
 		display: inline-block;
+	}
+
+	.ss-secondary-text {
+		display: none;
 	}
 
 	.ss-q-short {
