@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Thank You</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<section class="form-section">
+		<h1>Thank you!</h1>
+		<a href="http://govlab.github.io/academy-courses/canvas/canvas-form.html">Edit your responses</a>
+		<!-- <a class="ss-bottom-link" href="https://docs.google.com/forms/d/1yFQsx1RMkY84VOzuTVt9NxyKxl4zTZTtktsaRt261Oo/viewform?usp=form_confirm&amp;edit=ChI1OTIyNzMyMzUyMDg1NzI2ODUQ4pzRqb3tlZIN" title="Save this link to edit your response later.">Edit your response</a>
+		<a class="ss-bottom-link" target="_self" href="https://docs.google.com/forms/d/1yFQsx1RMkY84VOzuTVt9NxyKxl4zTZTtktsaRt261Oo/viewform?usp=form_confirm">Submit another response</a> -->
+	</section>
+</body>
+</html>
+
+<!-- http://stackoverflow.com/questions/10710354/how-to-add-edit-response-link-to-google-forms-emails -->
+
+<script>
+function responseURL() {
+ // Open a form by ID and log the responses to each question.
+ var form = FormApp.openById('1yFQsx1RMkY84VOzuTVt9NxyKxl4zTZTtktsaRt261Oo'); //this is the ID in the url of your live form
+ var formResponses = form.getResponses();
+ for (var i = 0; i < formResponses.length; i++) {
+   var formResponse = formResponses[i];
+   console.log(formResponse.getEditResponseUrl());
+   // Logger.log(formResponse.getEditResponseUrl());
+ }
+}
+</script>
